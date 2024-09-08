@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding-top: 60px; /* Adjust this value based on the height of your navbar */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-left: 1rem;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+    .full-screen-section, .reverse {
+        width: 50vw;
+        height: 50vh;
+    }
+}
+
+.full-screen-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100vw;
+    height: 100vh;
+}
+.myself{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main{
+    background-color: transparent;
+    height: 300px;
+    width: 920px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bar{
+    margin-top: 20px;
+    background-color: rgb(31, 93, 180);
+    height: 320px;
+    width: 250px;
+}
+
+.reverse {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100vw;
+    height: 100vh;margin-top: 10px;
+}
+
+.grid-item {
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;  
+
+}
+
+.item1 {
+    display: flex;
+    background-color: #ff6666;
+    grid-column: span 2;
+    grid-row: span 2;
+    align-items: center;
+    justify-content: center;    animation-delay: 0s;
+
+}
+
+.item2 {
+    background-color: #ffcc66;
+    grid-column: span 2;    animation-delay: 2s;
+
+}
+
+.item3 {
+    background-color: #ffff66;
+    grid-column: span 2;    animation-delay: 4s;
+
+}
+
+.item4 {
+    background-color: #66ff66;
+    grid-column: span 4;    animation-delay: 6s;
+
+}
+
+.item5 {
+    background-color: #52f4f4;
+    grid-column: span 2;
+}
+img{
+    height: 300px;
+    width: 700px;
+}
+
+.item6 {
+    background-color: #6666ff;
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.item7 {
+    background-color: #cc66ff;
+}
+
+.item8 {
+    background-color: #ff66cc;
+}
+.item9{
+    grid-column: span 3;
+}
+@keyframes dim-brighten-color {
+    0%, 100% {
+        filter: brightness(100%);
+        background-color: #ff6666;
+    }
+    25% {
+        filter: brightness(50%);
+        background-color: #ffcc66;
+    }
+    50% {
+        filter: brightness(100%);
+        background-color: #ffff66;
+    }
+    75% {
+        filter: brightness(50%);
+        background-color: #66ff66;
+    }
+}.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  .social{
+    margin-top: 40px;
+  }
